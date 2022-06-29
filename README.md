@@ -1,5 +1,8 @@
-# population_treemap
-Tree map of the population of Minnesota's counties and cities
+# Tree map of the population of Minnesota's counties and cities with [`treemapify`](https://cran.r-project.org/web/packages/treemapify/vignettes/introduction-to-treemapify.html) and [`tidycensus`](https://walker-data.com/tidycensus/).
+
+This tree map is simple: each rectangle represents a jurisdiction in Minnesota, and the size of the rectangle is proportional to the jurisdiction's population. Minnesota has 87 counties, and inside most counties there are incorporated and unincorporated places. So there are 87 larger rectangles (representing the counties) which are subdivided into smaller rectangles, representing the cities and towns in each county. The color of the city and town rectangles represents the community's median household income. 
+
+I couldn't find a Census table that broke down each county into incorporated and unincorporated places, so I had to do some calculating and joining. I made a version of this that labeled the population of each community, but I thought it was a little too busy.
 ---
 ```
 library(tidyverse)
